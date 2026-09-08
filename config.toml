@@ -1,0 +1,8 @@
+baseURL = 'https://yourusername.github.io/'
+languageCode = 'en-in'
+title = 'The AI Executive'
+theme = 'ananke'
+
+[params]
+  description = 'Practical AI and IIoT insights for modern managers and business leaders.'
+  background_color_class = 'bg-black'
