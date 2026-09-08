@@ -1,164 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beginner's Guide to Modern AI</title>
-    <style>
-        :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent: #38bdf8;
-            --accent-hover: #7dd3fc;
-            --border: #334155;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 4rem 2rem 2rem;
-            text-align: center;
-        }
-        h1 {
-            font-size: 2.5rem;
-            color: var(--text-main);
-            margin-bottom: 1rem;
-        }
-        .subtitle {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        main {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        .intro-text {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            margin-bottom: 3rem;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
-        @media (max-width: 640px) {
-            .grid { grid-template-columns: 1fr; }
-        }
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 1.5rem;
-            transition: transform 0.2s, border-color 0.2s;
-        }
-        .card:hover {
-            transform: translateY(-2px);
-            border-color: var(--accent);
-        }
-        .card h3 {
-            margin-top: 0;
-            color: var(--accent);
-            font-size: 1.3rem;
-        }
-        .card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 0;
-        }
-        .section-title {
-            font-size: 1.8rem;
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 0.5rem;
-            margin-top: 3rem;
-            margin-bottom: 1.5rem;
-        }
-        ul {
-            padding-left: 1.2rem;
-        }
-        li {
-            margin-bottom: 1rem;
-            color: var(--text-muted);
-        }
-        strong {
-            color: var(--text-main);
-        }
-        footer {
-            text-align: center;
-            padding: 4rem 2rem;
-            color: var(--text-muted);
-            border-top: 1px solid var(--border);
-            margin-top: 4rem;
-        }
-        .cta-box {
-            background: linear-gradient(135deg, #1e293b, #0f172a);
-            border: 1px dashed var(--accent);
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            margin-top: 4rem;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A visual, practical beginner's guide to modern AI types, use cases, and safe implementation.">
+    <title>Modern AI Field Guide | Naresh Kumar Manohar</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="navbar"><div class="nav-container"><a class="logo" href="#top">AI<span>/FIELD GUIDE</span></a><div class="nav-actions"><a class="social-btn linkedin-btn" href="https://linkedin.com" target="_blank" rel="noopener">in <span>LinkedIn</span></a><a class="social-btn github-btn" href="https://github.com" target="_blank" rel="noopener">◖ <span>GitHub</span></a><button id="theme-toggle" type="button" aria-label="Toggle theme">🌓 <span>Theme</span></button></div></div></nav>
+    <header class="hero" id="top"><div class="hero-inner"><p class="eyebrow">A visual beginner's guide / 2026</p><h1>The Beginner's Cheat Sheet to <em>Modern AI</em></h1><p class="hero-copy">Understand the major AI types, see where they create value, and learn how to move from a clever demo to a dependable business system.</p><div class="byline"><span>By Naresh Kumar Manohar</span><span>•</span><span id="reading-time">Calculating reading time...</span></div></div><div class="hero-stamp"><span>FIELD<br>NOTE</span><b>01—04</b></div></header>
+    <main class="page-shell"><article class="blog-post">
+        <section class="intro"><p class="lead-text">AI becomes easier to use when you separate the job from the hype. Some systems predict what may happen, some create a first draft, some look up evidence, and some execute a multi-step plan.</p><p>This field guide uses plain language, operational examples, and flow charts to show what each type does well. Use the decision map below before choosing a model or vendor.</p></section>
+        <section class="decision-map"><div class="section-kicker">START HERE / DECISION MAP</div><h2>What kind of AI problem do you have?</h2><div class="decision-grid"><a href="#predictive"><b>01</b><strong>Need a forecast?</strong><span>Choose Predictive AI</span></a><a href="#generative"><b>02</b><strong>Need a new draft?</strong><span>Choose Generative AI</span></a><a href="#rag"><b>03</b><strong>Need an evidence-based answer?</strong><span>Choose RAG</span></a><a href="#agentic"><b>04</b><strong>Need a task executed?</strong><span>Choose Agentic AI</span></a></div></section>
+        <section class="comparison"><div class="section-kicker">AT A GLANCE / FOUR APPLICATION PATTERNS</div><h2>Same family. Different jobs.</h2><p class="section-note">These are useful application patterns, not the only possible AI taxonomy. Predictive and generative describe capabilities; RAG describes an architecture; agentic AI describes a goal-driven system design.</p><div class="comparison-table"><div class="table-head"><span>Pattern</span><span>Best question</span><span>Practical output</span><span>Good first project</span></div><div><strong>Predictive AI</strong><span>What happens next?</span><span>Score or forecast</span><span>Demand planning</span></div><div><strong>Generative AI</strong><span>What can we make?</span><span>New content</span><span>Proposal drafting</span></div><div><strong>RAG</strong><span>What do our sources say?</span><span>Cited answer</span><span>Policy assistant</span></div><div><strong>Agentic AI</strong><span>What should happen now?</span><span>Completed workflow</span><span>Ticket triage</span></div></div></section>
 
-    <header>
-        <h1>The Beginner’s Cheat Sheet to Modern AI</h1>
-        <p class="subtitle">From Chatbots to Autonomous Agents: A guide designed for clear understanding.</p>
-    </header>
+        <section class="ai-section" id="predictive"><header class="section-heading"><span class="chapter">01</span><div><p class="section-kicker">FORECASTING / CLASSIFICATION</p><h2><span class="glossary-term" data-term="Predictive AI">Predictive AI</span></h2></div></header><p class="summary">The analyst. Learns patterns from historical examples and returns a probability, score, or forecast.</p><div class="two-column"><div><h3>How it works</h3><p>Features such as orders, temperature, or account activity are passed into a trained model. The model estimates an outcome and is monitored against reality.</p><div class="flow-chart"><div><b>01</b><span>Historical data</span></div><i>→</i><div><b>02</b><span>Train model</span></div><i>→</i><div><b>03</b><span>Score outcome</span></div></div></div><div class="example"><p class="mini-label">PRACTICAL EXAMPLE</p><h3>Predicting customer churn</h3><p>A subscription company scores accounts weekly. A service team receives the high-risk list, offers help, and measures whether retention improves.</p><span class="metric">KPI / churn lift + forecast error</span></div></div><div class="target-line"><h3>Strategic targets &amp; KPIs</h3><span>Forecast error (MAPE)</span><span>Precision / recall</span><span>Cost per prevented incident</span></div><div class="workflow"><h3>Live workflow / supply planning</h3><ol><li>Combine orders, seasonality, promotions, and lead times.</li><li>Forecast next-month demand by product and region.</li><li>Send low-confidence predictions to a planner.</li><li>Compare stockouts and forecast error each week.</li></ol></div><a class="learn-link" href="https://scikit-learn.org/stable/user_guide.html" target="_blank" rel="noopener">Learn with the official Scikit-learn guide ↗</a></section>
 
-    <main>
-        <p class="intro-text">The AI landscape is moving at a breakneck pace. If you are trying to steer your team or project through this tech wave, it can feel like everyone is speaking a different language. You don’t need a PhD in computer science to understand how these tools work. Here is your quick, no-jargon cheat sheet to the modern AI toolkit.</p>
+        <section class="ai-section" id="generative"><header class="section-heading"><span class="chapter">02</span><div><p class="section-kicker">SYNTHESIS / CREATION</p><h2><span class="glossary-term" data-term="Generative AI">Generative AI</span></h2></div></header><p class="summary">The drafting partner. Creates text, code, images, audio, or other artifacts from instructions and context.</p><div class="two-column"><div><h3>How it works</h3><p>A model turns a prompt into tokens, predicts a likely next token, and repeats the process until it reaches a stopping point. Context and review determine usefulness.</p><div class="flow-chart"><div><b>01</b><span>Prompt + context</span></div><i>→</i><div><b>02</b><span>Model predicts</span></div><i>→</i><div><b>03</b><span>Draft output</span></div></div></div><div class="example"><p class="mini-label">PRACTICAL EXAMPLE</p><h3>Drafting a sales proposal</h3><p>A seller supplies approved claims, a customer brief, and tone. The model creates a first draft; a human checks pricing, facts, and commitments.</p><span class="metric">KPI / time to first draft</span></div></div><div class="target-line"><h3>Strategic targets &amp; KPIs</h3><span>Time saved per task</span><span>Acceptance / edit rate</span><span>Cost per completed task</span></div><div class="workflow"><h3>Live workflow / support reply</h3><ol><li>Summarize the customer issue and attach approved policy context.</li><li>Generate two response options in the brand voice.</li><li>Check claims, tone, and personal data before sending.</li><li>Track resolution time and reviewer edits.</li></ol></div><a class="learn-link" href="https://platform.openai.com/docs/overview" target="_blank" rel="noopener">Learn with the official OpenAI documentation ↗</a></section>
 
-        <h2 class="section-title">The AI Lineup</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Predictive AI (The Analyst)</h3>
-                <p>Crunches massive mountains of historical data, spots hidden trends, and helps you accurately forecast what is likely to happen next quarter.</p>
-            </div>
-            <div class="card">
-                <h3>Generative AI (The Assistant)</h3>
-                <p>Creates brand-new content from scratch—text, images, code, or marketing drafts—based on simple conversational human prompts.</p>
-            </div>
-            <div class="card">
-                <h3>RAG (The Fact-Checker)</h3>
-                <p>Retrieval-Augmented Generation connects standard AI models safely to your private company files, preventing guesswork and tracking exact facts.</p>
-            </div>
-            <div class="card">
-                <h3>Agentic AI (The Worker)</h3>
-                <p>The next frontier. You provide a final complex goal, and this autonomous agent maps out steps, uses software tools, and accomplishes workflows independently.</p>
-            </div>
-        </div>
+        <section class="ai-section" id="rag"><header class="section-heading"><span class="chapter">03</span><div><p class="section-kicker">GROUNDING / EVIDENCE</p><h2><span class="glossary-term" data-term="RAG">RAG</span> Architecture</h2></div></header><p class="summary">The evidence layer. Retrieves relevant passages from trusted sources before a language model writes an answer.</p><div class="two-column"><div><h3>How it works</h3><p>Documents are split into chunks and converted into <span class="glossary-term" data-term="RAG">embeddings</span>. A question searches the index, then the best passages become model context.</p><div class="flow-chart"><div><b>01</b><span>Index sources</span></div><i>→</i><div><b>02</b><span>Retrieve facts</span></div><i>→</i><div><b>03</b><span>Answer + cite</span></div></div></div><div class="example"><p class="mini-label">PRACTICAL EXAMPLE</p><h3>Searching company policy</h3><p>An employee asks about parental leave. The assistant finds the current regional policy, quotes the source, and refuses to guess when no evidence exists.</p><span class="metric">KPI / grounded answer rate</span></div></div><div class="target-line"><h3>Strategic targets &amp; KPIs</h3><span>Citation accuracy</span><span>Time to resolution</span><span>Answer abstention rate</span></div><div class="workflow"><h3>Live workflow / policy assistant</h3><ol><li>Index approved documents with owners, dates, and access labels.</li><li>Retrieve passages using identity and department filters.</li><li>Answer briefly with citations and a confidence signal.</li><li>Escalate missing or conflicting evidence to a subject expert.</li></ol></div><a class="learn-link" href="https://python.langchain.com/docs/concepts/rag/" target="_blank" rel="noopener">Learn with the official LangChain RAG docs ↗</a></section>
 
-        <h2 class="section-title">Navigating AI Responsibly</h2>
-        <ul>
-            <li><strong>Watch Out for "Hallucinations":</strong> AI models love to please you. When they don’t know an answer, they confidently make up an answer that sounds real. Always keep a human in the loop to review output.</li>
-            <li><strong>Lock Down Data Security:</strong> Public AI tools learn from the data you feed them. Avoid pasting confidential spreadsheets or proprietary code into public platforms. Use secure, enterprise-grade cloud environments instead.</li>
-            <li><strong>Check for Hidden Bias:</strong> Since AI models learn from historical human choices, they will perfectly replicate and scale existing real-world bias unless closely audited.</li>
-        </ul>
+        <section class="ai-section" id="agentic"><header class="section-heading"><span class="chapter">04</span><div><p class="section-kicker">PLANNING / EXECUTION</p><h2><span class="glossary-term" data-term="Agentic AI">Agentic AI</span></h2></div></header><p class="summary">The workflow operator. Plans around a goal, calls approved tools, observes results, and stops or escalates within boundaries.</p><div class="two-column"><div><h3>How it works</h3><p>An orchestration loop gives a model state, tools, permissions, a budget, and stop conditions. Reliable agents are bounded, observable, and reversible.</p><div class="flow-chart"><div><b>01</b><span>Set goal</span></div><i>→</i><div><b>02</b><span>Use tools</span></div><i>→</i><div><b>03</b><span>Verify action</span></div></div></div><div class="example"><p class="mini-label">PRACTICAL EXAMPLE</p><h3>Triaging an IT ticket</h3><p>An agent classifies an issue, checks runbooks, gathers diagnostics, drafts a response, and asks a human before changing production or granting access.</p><span class="metric">KPI / straight-through processing</span></div></div><div class="target-line"><h3>Strategic targets &amp; KPIs</h3><span>Mean time to completion</span><span>Escalation rate</span><span>Tool-call failure rate</span></div><div class="workflow"><h3>Live workflow / service triage</h3><ol><li>Classify the incoming ticket and check customer context.</li><li>Select approved diagnostic and knowledge tools.</li><li>Draft a response or prepare a change request.</li><li>Require human sign-off for refunds or production changes.</li></ol></div><a class="learn-link" href="https://microsoft.github.io/autogen/stable/" target="_blank" rel="noopener">Learn with the official Microsoft AutoGen docs ↗</a></section>
 
-        <div class="cta-box">
-            <h3>Coming Up Next...</h3>
-            <p>Now that we have the core terms down, our next post takes these exact concepts and drops them onto the factory floor. We will explore how AI shifts into the physical world through <strong>Industrial IoT (IIoT)</strong>. Stay tuned!</p>
-        </div>
-    </main>
+        <section class="effectiveness"><div class="effectiveness-intro"><p class="section-kicker">MAKE AI MORE EFFECTIVE</p><h2>Better results come from better systems.</h2><p>Model quality matters, but most practical gains come from the surrounding workflow. Treat AI like a product with a user, an owner, a success measure, and a safe fallback.</p></div><div class="effectiveness-grid"><article><b>01 / Define</b><h3>Start with a narrow job</h3><p>Write the user, input, desired output, and “do not do” boundary before choosing a model.</p></article><article><b>02 / Ground</b><h3>Give it the right context</h3><p>Use approved data, retrieval, examples, and clear instructions. More context is not always better context.</p></article><article><b>03 / Evaluate</b><h3>Test before launch</h3><p>Build a representative test set. Measure accuracy, refusal quality, latency, cost, and harmful edge cases.</p></article><article><b>04 / Observe</b><h3>Monitor the real workflow</h3><p>Log versions, prompts, sources, tool calls, corrections, and outcomes without exposing sensitive content.</p></article><article><b>05 / Improve</b><h3>Use feedback deliberately</h3><p>Fix the data, prompt, retrieval, or interface based on failure patterns. Do not fine-tune by instinct.</p></article><article><b>06 / Govern</b><h3>Keep humans in control</h3><p>Require approval for high-impact actions and provide an easy way to correct, appeal, or stop the system.</p></article></div></section>
 
-    <footer>
-        <p>&copy; 2026 Naresh Kumar. Built with Git & GitHub Pages.</p>
-    </footer>
+        <section class="terminology"><div class="section-kicker">AI VOCABULARY / THE TERMS BEHIND THE TOOLS</div><h2>Know what people mean.</h2><div class="terminology-grid"><article><h3><span class="glossary-term" data-term="Hallucination">Hallucination</span></h3><p>A fluent but unsupported or false output. Reduce risk with grounded sources, structured outputs, validation, abstention, and human review.</p><span class="term-label">RISK / VERIFY FACTS</span></article><article><h3><span class="glossary-term" data-term="Multi-agent system">Multi-agent system</span></h3><p>Several specialized agents coordinate through messages or a shared state. Use it only when separation of roles improves quality enough to justify extra complexity.</p><span class="term-label">PATTERN / COORDINATE</span></article><article><h3><span class="glossary-term" data-term="Tool calling">Plugins &amp; tools</span></h3><p>Structured capabilities an AI can request, such as search, a database query, or a calendar action. Validate permissions and arguments on the server.</p><span class="term-label">CAPABILITY / EXECUTE</span></article><article><h3><span class="glossary-term" data-term="AI skill">AI skills / instructions</span></h3><p>Reusable instructions, procedures, examples, and constraints that teach a system how to perform a recurring task. Version them like code and test them like prompts.</p><span class="term-label">CONTROL / STANDARDIZE</span></article><article><h3><span class="glossary-term" data-term="Foundation model">Foundation model</span></h3><p>A broadly trained model adapted to many downstream tasks. It provides general capability; your application supplies the data, policies, and interface.</p><span class="term-label">MODEL / REUSE</span></article><article><h3><span class="glossary-term" data-term="Fine-tuning">Fine-tuning</span></h3><p>Additional training on task-specific examples to change behavior or style. It is not the usual solution for keeping fast-changing facts current.</p><span class="term-label">ADAPT / SPECIALIZE</span></article></div></section>
 
+        <section class="quiz-container" id="knowledge-check"><div class="quiz-heading"><div><p class="section-kicker">CHECK YOUR MODEL</p><h2>Test your AI fundamentals.</h2></div><span class="quiz-progress" id="quiz-progress">1 / 4</span></div><div class="quiz-stage"><div class="quiz-question" data-question="0"><h3>Which system should answer from private policy documents?</h3><p>Choose the architecture that retrieves evidence before generating a response.</p><div class="quiz-options"><button class="quiz-btn" data-correct="false" type="button">A standard language model</button><button class="quiz-btn" data-correct="true" type="button">Retrieval-Augmented Generation (RAG)</button><button class="quiz-btn" data-correct="false" type="button">A regression model</button></div></div><div class="quiz-question hidden" data-question="1"><h3>Which AI pattern is best for next-month demand forecasting?</h3><p>Choose the system that estimates a future value from historical examples.</p><div class="quiz-options"><button class="quiz-btn" data-correct="true" type="button">Predictive AI</button><button class="quiz-btn" data-correct="false" type="button">Generative AI</button><button class="quiz-btn" data-correct="false" type="button">A plugin marketplace</button></div></div><div class="quiz-question hidden" data-question="2"><h3>What is a hallucination?</h3><p>Choose the most accurate description of this common AI failure mode.</p><div class="quiz-options"><button class="quiz-btn" data-correct="false" type="button">A model becoming temporarily unavailable</button><button class="quiz-btn" data-correct="true" type="button">A fluent answer that is unsupported or false</button><button class="quiz-btn" data-correct="false" type="button">A secure database retrieval</button></div></div><div class="quiz-question hidden" data-question="3"><h3>When is a multi-agent system justified?</h3><p>Choose the best engineering reason to introduce multiple coordinating agents.</p><div class="quiz-options"><button class="quiz-btn" data-correct="false" type="button">To make every simple prompt more complicated</button><button class="quiz-btn" data-correct="false" type="button">To guarantee that every answer is correct</button><button class="quiz-btn" data-correct="true" type="button">When specialized roles improve a complex workflow enough to justify the overhead</button></div></div></div><div id="quiz-feedback" class="quiz-feedback hidden" role="status" aria-live="polite"></div><div class="quiz-controls"><button class="quiz-nav" id="quiz-prev" type="button" aria-label="Previous question">← <span>Previous</span></button><div class="quiz-dots" id="quiz-dots" aria-label="Quiz questions"></div><button class="quiz-nav" id="quiz-next" type="button" aria-label="Next question"><span>Next</span> →</button></div></section>
+        <section class="guardrails"><div><p class="section-kicker">SHIP RESPONSIBLY</p><h2>Guardrails are part of the product.</h2><p>Start small, measure outcomes, and keep people accountable for high-impact decisions.</p></div><div class="guardrail-list"><div><b>01 / Truth</b><span>Use citations, abstention, evaluation sets, and human review to contain hallucinations.</span></div><div><b>02 / Control</b><span>Protect corporate data with access filters, retention policies, encryption, and audit logs.</span></div><div><b>03 / Fairness</b><span>Audit outcomes across cohorts, document limitations, and provide an appeal path.</span></div></div></section>
+        <section class="learning"><div><p class="section-kicker">CONTINUE LEARNING</p><h2>A practical next step for every level.</h2></div><div class="learning-grid"><a href="https://www.elementsofai.com/" target="_blank" rel="noopener"><b>01 / Foundation</b><strong>Elements of AI</strong><span>Free, gentle introduction to AI concepts.</span></a><a href="https://developers.google.com/machine-learning/crash-course" target="_blank" rel="noopener"><b>02 / Build</b><strong>Google ML Crash Course</strong><span>Hands-on fundamentals for models and data.</span></a><a href="https://huggingface.co/learn" target="_blank" rel="noopener"><b>03 / Explore</b><strong>Hugging Face Learn</strong><span>Practical courses for modern open models.</span></a></div></section>
+    </article></main><div id="glossary-tooltip" class="tooltip hidden" role="tooltip"></div><footer>© 2026 Naresh Kumar Manohar/ AI field notes for responsible builders.</footer><script src="dictionary.js"></script><script src="script.js"></script>
 </body>
 </html>
